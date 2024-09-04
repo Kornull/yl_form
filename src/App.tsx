@@ -1,7 +1,11 @@
+import FormComponent from './components/form/FormComponent';
+
+import './App.scss';
+
 function App() {
   return (
-    <div className="">
-      <h1>app</h1>
+    <div className="App">
+      <FormComponent />
     </div>
   );
 }

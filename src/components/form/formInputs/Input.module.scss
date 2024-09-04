@@ -1,0 +1,38 @@
+.input {
+  height: 36px;
+  padding: 4px 6px;
+  font-size: 24px;
+  font-weight: 100;
+  color: #414141;
+  background: #f0f0f0;
+  border-radius: 6px;
+  border: 0.6px solid #414141;
+
+  &:active,
+  &:focus {
+    outline: none !important;
+    border-color: #00a1c9;
+    background: #ffffff;
+  }
+
+  &Err {
+    border-color: #ff3131;
+    &:focus {
+      border-color: #ff3131;
+    }
+  }
+
+  &Label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &ErrorMsq {
+    height: 18px;
+    color: #ff3131;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 2px;
+  }
+}
