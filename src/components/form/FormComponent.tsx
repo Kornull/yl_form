@@ -22,7 +22,7 @@ const FormComponent = () => {
   const [isPswdValid, setIsPswdValid] = useState<boolean>(false);
   const [isBtnDisabled, setIsBtnDisabled] = useState<boolean>(true);
 
-  const updateDisabledValue = () => {
+  const updateDisabledValue = (): void => {
     if (isMailValid && isPswdValid) {
       setIsBtnDisabled(false);
     } else {
@@ -30,11 +30,11 @@ const FormComponent = () => {
     }
   };
 
-  const closeSnack = () => {
+  const closeSnack = (): void => {
     setTimeout(() => setIsViewSnack(false), 3000);
   };
 
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit = handleSubmit((data): void => {
     let isAuth: boolean = false;
 
     setIsViewLoader(true);
