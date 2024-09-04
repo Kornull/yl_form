@@ -1,12 +1,14 @@
 .form {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: end;
   width: 100%;
   max-width: 420px;
-  height: 60vh;
+  height: 340px;
   gap: 6px;
-  padding: 40px 10px;
+  padding: 40px 10px 20px;
+  margin-top: 20px;
   border: 1px solid #bbbbbb;
   border-radius: 12px;
   box-shadow: 0 0 12px #00000042;
@@ -23,11 +25,14 @@
   }
 
   &Btn {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
     padding: 10px 6px;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    width: 100%;
+    width: calc(100% - 20px);
     text-transform: uppercase;
     background-color: #73acf7;
     border-radius: 4px;
@@ -47,6 +52,9 @@
     }
 
     @media (min-width: 480px) {
+      position: relative;
+      bottom: 0px;
+      left: 0px;
       width: 160px;
       margin-top: 0;
     }
@@ -57,7 +65,7 @@
   background-color: #c5c2c2a3;
 
   &:hover {
-    cursor:default;
+    cursor: default;
     background-color: #c5c2c2a3;
   }
 
