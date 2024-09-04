@@ -1,0 +1,62 @@
+.snack {
+  position: fixed;
+  top: 36px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  background: #2da000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: -110px;
+  padding: 10px 20px;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  opacity: 0;
+  
+  &Show {
+    visibility: visible;
+    animation:
+    fadein .5s,
+    fadeout .5s 2.5s;
+    opacity: 1;
+  }
+  
+  &Error {
+    background: #be1d01;
+  }
+
+  &Container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 36px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 36px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
