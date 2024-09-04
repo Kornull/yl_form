@@ -16,7 +16,5 @@ export const mockUserRequest = ({ email, pswd }: StateForm): boolean => {
     (user) => user.login === email && user.password === pswd
   );
 
-  console.log(result);
-
   return result.length ? true : false;
 };

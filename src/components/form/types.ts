@@ -5,14 +5,13 @@ import { StateForm } from 'src/types';
 export type FormInputsMail = {
   register: UseFormRegister<StateForm>;
   getValue: UseFormGetValues<StateForm>;
+  setDisabled: (s: boolean) => void;
 };
 
 export enum InputTitles {
-  'LOGIN' = 'Логин',
   'PASSWORD' = 'Пароль',
   'EMAIL' = 'Почта',
 }
 export enum ErrorValues {
-  'PASSWORD' = 'Пароль',
   'EMAIL' = 'Некорректный адрес',
 }
