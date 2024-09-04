@@ -2,12 +2,14 @@ import { useForm } from 'react-hook-form';
 
 import { MailInput, PasswordInput } from './formInputs';
 
-import './Form.scss';
-import { StateForm } from 'src/types';
-import { mockUserRequest } from '../../services/mock';
 import { Loader } from '../loader';
 import { useState } from 'react';
 import { Snack } from '../snack';
+
+import { mockUserRequest } from '../../services/mock';
+
+import { StateForm } from 'src/types';
+import './Form.scss';
 
 const FormComponent = () => {
   const { register, getValues, handleSubmit, reset } = useForm<StateForm>({

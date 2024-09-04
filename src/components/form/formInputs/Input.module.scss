@@ -1,6 +1,6 @@
 .input {
   height: 36px;
-  padding: 4px 6px;
+  padding: 6px;
   font-size: 24px;
   font-weight: 100;
   color: #414141;
@@ -17,9 +17,8 @@
     outline: none !important;
     border-color: #00a1c9;
     background: #ffffff;
-
-    
-  } + &Title{
+  }
+  + &Title {
     color: #00a1c9;
   }
 
@@ -42,5 +41,27 @@
     font-weight: 300;
     font-size: 12px;
     padding: 2px;
+  }
+
+  &Password {
+    position: relative;
+
+    &Fild {
+      padding-right: 34px;
+    }
+
+    &Btn {
+      position: absolute;
+      right: 4px;
+      bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &Icon {
+        font-size: 30px;
+        fill: #5f5e5e;
+      }
+    }
   }
 }

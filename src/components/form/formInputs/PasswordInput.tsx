@@ -1,13 +1,17 @@
 import { useState } from 'react';
-import { FormInputsMail, InputTitles } from '../types';
+
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 
 import { passwdValidator } from '../../../services/validator';
+
+import { FormInputsMail, InputTitles } from '../types';
 
 import styles from './Input.module.scss';
 
 export const PasswordInput = ({ register, getValue }: FormInputsMail) => {
   const [msq, setMsq] = useState<string>('');
   const [err, setErr] = useState<boolean>(false);
+  const [isViewPswd, setisViewPswd] = useState<boolean>(false);
 
   const updateDataValue = () => {
     const validData = passwdValidator(getValue('pswd'));
@@ -17,11 +21,11 @@ export const PasswordInput = ({ register, getValue }: FormInputsMail) => {
 
   return (
     <>
-      <label className={styles.inputLabel}>
+      <label className={`${styles.inputLabel} ${styles.inputPassword}`}>
         <span className={styles.inputTitle}>{InputTitles.PASSWORD}</span>
         <input
-          className={`${styles.input}  ${err && styles.inputErr}`}
-          type="text"
+          className={`${styles.input}  ${err && styles.inputErr} ${styles.inputPasswordFild}`}
+          type={isViewPswd ? 'text' : 'password'}
           autoComplete="off"
           {...register('pswd', {
             required: true,
@@ -33,6 +37,17 @@ export const PasswordInput = ({ register, getValue }: FormInputsMail) => {
             },
           })}
         />
+        <button
+          type="button"
+          className={styles.inputPasswordBtn}
+          onClick={() => setisViewPswd(!isViewPswd)}
+        >
+          {isViewPswd ? (
+            <AiOutlineEyeInvisible className={styles.inputPasswordBtnIcon} />
+          ) : (
+            <AiOutlineEye className={styles.inputPasswordBtnIcon} />
+          )}
+        </button>
         <span className={styles.inputErrorMsq}>{err && msq}</span>
       </label>
     </>
