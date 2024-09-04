@@ -1,9 +1,6 @@
 import { UseFormGetValues, UseFormRegister } from 'react-hook-form';
 
-export type StateForm = {
-  email: string;
-  pswd: string;
-};
+import { StateForm } from 'src/types';
 
 export type FormInputsMail = {
   register: UseFormRegister<StateForm>;

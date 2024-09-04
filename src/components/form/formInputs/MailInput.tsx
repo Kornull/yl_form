@@ -15,7 +15,7 @@ export const MailInput = ({ register, getValue }: FormInputsMail) => {
   return (
     <>
       <label className={styles.inputLabel}>
-        <span>{InputTitles.EMAIL}</span>
+        <span className={styles.inputTitle}>{InputTitles.EMAIL}</span>
         <input
           className={`${styles.input} ${err && styles.inputErr}`}
           type="text"

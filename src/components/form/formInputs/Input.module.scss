@@ -8,11 +8,19 @@
   border-radius: 6px;
   border: 0.6px solid #414141;
 
+  &Title {
+    color: #5f5e5e;
+  }
+
   &:active,
   &:focus {
     outline: none !important;
     border-color: #00a1c9;
     background: #ffffff;
+
+    
+  } + &Title{
+    color: #00a1c9;
   }
 
   &Err {
